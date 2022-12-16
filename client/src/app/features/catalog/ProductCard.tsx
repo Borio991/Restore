@@ -8,7 +8,8 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import { Product } from "../models/Product";
+import { Link } from "react-router-dom";
+import { Product } from "../../models/Product";
 
 interface Props {
   product: Product;
@@ -44,11 +45,7 @@ function ProductCard({ product }: Props) {
         }}
       />
       <CardContent>
-        <Typography
-          gutterBottom
-          color="secondary"
-          variant="h5"
-        >
+        <Typography gutterBottom color="secondary" variant="h5">
           ${(product.price / 100).toFixed(2)}
         </Typography>
         <Typography variant="body2" color="text.secondary">
@@ -57,7 +54,9 @@ function ProductCard({ product }: Props) {
       </CardContent>
       <CardActions>
         <Button size="small">Add To Cart</Button>
-        <Button size="small">View</Button>
+        <Button size="small" component={Link} to={`/catalog/${product.id}`}>
+          View
+        </Button>
       </CardActions>
     </Card>
   );

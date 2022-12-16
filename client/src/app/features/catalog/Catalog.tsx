@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Product } from "../models/Product";
+import { Product } from "../../models/Product";
 import ProductList from "./ProductList";
 
 function Catalog() {
