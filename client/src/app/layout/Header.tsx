@@ -14,7 +14,7 @@ function Header({ darkMode, handleChange }: Props) {
   return (
     <AppBar position="static" sx={{ mb: 4 }}>
       <Toolbar>
-        <Typography variant="h6">Re-Store</Typography>
+        <Typography variant="h6">ReStore</Typography>
         <Switch
           checked={darkMode}
           onChange={handleChange}
